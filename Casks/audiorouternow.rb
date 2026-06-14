@@ -15,8 +15,11 @@ cask "audiorouternow" do
   uninstall quit: "com.audiorouter.now"
 
   zap trash: [
-    "~/.audiorouter",
-    "~/Library/Logs/AudioRouterNow",
-    "~/Library/LaunchAgents/com.audiorouter.now.helper.plist",
-  ]
+      "~/.audiorouter",
+      "~/Library/Logs/AudioRouterNow",
+      "~/Library/LaunchAgents/com.audiorouter.now.helper.plist",
+    ],
+    delete: [
+      "/Library/Audio/Plug-Ins/HAL/AudioRouterNow.driver",
+    ]
 end
