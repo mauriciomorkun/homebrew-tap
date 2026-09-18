@@ -1,6 +1,6 @@
 cask "audiorouternow" do
-  version "3.4.4"
-  sha256 "65e1ac5a8d340ae71ba5ab3c1b7eb54f251980c20d48e797ec65a69e8c8231b2"
+  version "3.4.5"
+  sha256 "6b92f8cee95a27afb84cee1564140dff1cb98696e25c6ec00c175172f069ed01"
 
   url "https://github.com/mauriciomorkun/AudioRouterNow/releases/download/v#{version}/AudioRouterNow.dmg"
   name "AudioRouterNow"
