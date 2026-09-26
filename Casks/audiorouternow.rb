@@ -1,13 +1,16 @@
 cask "audiorouternow" do
-  version "3.4.5"
-  sha256 "6b92f8cee95a27afb84cee1564140dff1cb98696e25c6ec00c175172f069ed01"
+  version "3.4.6"
+  sha256 "c97b1bfb6b9ec6238f642821922f20bb549b99b05f588168e810a836d883a3c4"
 
   url "https://github.com/mauriciomorkun/AudioRouterNow/releases/download/v#{version}/AudioRouterNow.dmg"
   name "AudioRouterNow"
-  desc "Free, open-source macOS audio routing — send system audio to multiple outputs simultaneously"
+  desc "Free, open-source macOS audio routing, send system audio to multiple outputs simultaneously"
   homepage "https://audiorouternow.mauriciomorkun.com"
 
-  # Sparkle 2.9.3 integriert — auto-updates via appcast
+  # Sparkle startet ab 3.4.6 tatsaechlich und ruft den Appcast ab (CASE-006).
+  # Belegt am 26.09.2026: Appcast mit 7140 Bytes im URL-Cache der installierten App,
+  # Zeitstempel deckungsgleich mit SULastCheckTime. Vor 3.4.6 war der Updater tot,
+  # brew upgrade uebersprang die App, und es gab gar keinen Weg zu einer neuen Version.
   auto_updates true
 
   app "AudioRouterNow.app"
